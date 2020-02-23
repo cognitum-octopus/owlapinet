@@ -1,0 +1,13 @@
+/Cognitum.OwlApi.Net.HermiT/bin
+/Cognitum.OwlApi.Net.HermiT/obj
+/Cognitum.OwlApi.Net.Pellet/obj
+/Cognitum.OwlApi.Net.Pellet/bin
+/Cognitum.OwlApi.Net.ReasonerInterface/obj
+/Cognitum.OwlApi.Net.ReasonerInterface/bin
+/Cognitum.OwlApi.Net.Test/obj
+/Cognitum.OwlApi.Net.Test/bin
+/IKVM
+/*.suo
+/Cognitum.OwlApi.Net.Test/*.user
+/Cognitum.OwlApi.Net.Pellet/*.user
+/Cognitum.OwlApi.Net.HermiT/*.user

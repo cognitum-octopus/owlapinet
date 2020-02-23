@@ -1,0 +1,1 @@
+Depending on the reasoner that you want to add, there could be different procedure. The best way to add a new reasoner to the project is to follow a similar procedure to the one proposed in [compile hermit](compile-hermit) and [compile pellet](compile-pellet).

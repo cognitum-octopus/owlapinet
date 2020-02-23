@@ -1,0 +1,45 @@
+<div class="wikidoc">
+<p><strong>Project Description</strong></p>
+<p>OWL API for .Net is a project developed by&nbsp;<a href="http://www.cognitum.eu/" target="_blank">Cognitum</a>&nbsp;the creator of ontology editor
+<a href="http://www.cognitum.eu/semantics/FluentEditor/" target="_blank">Fluent Editor</a>.</p>
+<p style="text-align:justify">OWL API for .Net is an open source project that port the java
+<a href="http://owlapi.sourceforge.net/" target="_blank">OWLAPI</a>&nbsp;in .Net. In this project we include the scripts to compile (through IKVM) the OWLAPI library and the reasoners jar in Windows libraries (dll). Furthermore in this project we have a
+<strong>console test application</strong>,&nbsp;a .Net version of the Owl reasoner interface and the sample&nbsp;implementation of this interface for
+<a href="http://hermit-reasoner.com/" target="_blank">HermiT</a>&nbsp;and <a href="http://clarkparsia.com/pellet/" target="_blank">
+Pellet</a>.</p>
+<p style="text-align:justify">In the console application,&nbsp;it is possible to test the reasoners and the examples from the&nbsp;<a href="https://github.com/owlcs/owlapi/blob/master/contract/src/test/java/org/coode/owlapi/examples/Examples.java" target="_blank">OWLAPI
+ examples</a>.</p>
+<p style="text-align:justify">If you are interested in adding a new OWL Java reasoner or change the version of the reasoners currently loaded in the project, you have to compile it through IKVM to Windows Libraries. For this purpose we added in the project
+ the <strong>makeDLL.sh&nbsp;</strong>script. This script is a BASH script (yes you can use bash in window, see at the end for further info) which search for all jars in a certain Directory (parameter) and pack it through
+<strong>IKVM</strong> (see section IKVM below).</p>
+<p style="text-align:justify">Then to&nbsp;</p>
+<h3>OWLAPI:</h3>
+<ul>
+<li>Download the latest version of the OWLApi from&nbsp;<a href="http://sourceforge.net/projects/owlapi/files/OWL%20API%20%28for%20OWL%202.0%29/" target="_blank">here</a>.
+</li><li>compile it with the command: makeDLL.sh -o owlapi.dll FOLDER-WITH-OWLAPI-JAR </li></ul>
+<p>&nbsp;</p>
+<h3>Sample 1 - HermiT:</h3>
+<ul>
+<li>Download HermiT&nbsp;<a title="HermiT" href="http://hermit-reasoner.com/download.html" target="_blank">here</a>
+</li><li>Unzip to HERMIT_FOLDER </li><li>Copy the <strong>.jar</strong>&nbsp;in HERMIT_FOLDER\project\lib\ (!! do not copy owlapi...jar !!) to HERMIT_LIBS
+</li><li>Copy the HERMIT_FOLDER\org.semanticweb.HermiT.jar to HERMIT_LIBS </li><li>Compile it with the command: &nbsp; makeDLL.sh -o TestOWLReasoners.Net/Reasoners/HermiT/hermit.dll -ref Reasoners/owlapi.dll&nbsp;HERMIT_LIBS
+</li></ul>
+<h3>Sample 2 - Pellet:</h3>
+<ul>
+<li>Download Pellet&nbsp;<a title="Pellet" href="http://clarkparsia.com/pellet/download" target="_blank">here</a>
+</li><li>Unzip to PELLET_FOLDER </li><li>Copy the <strong>.jar and folders&nbsp;</strong>in PELLET_FOLDER\lib to PELLET_LIBS
+</li><li>Compile it with the command: &nbsp;&nbsp;makeDLL.sh -o&nbsp;TestOWLReasoners.Net/Reasoners/Pellet/pellet.dll -ref Reasoners/owlapi.dll&nbsp;PELLET_LIBS
+</li></ul>
+<p>&nbsp;</p>
+<h3>&nbsp;IKVM:</h3>
+<ul>
+<li>Download IKVM from&nbsp;<a href="http://sourceforge.net/projects/ikvm/files/ikvm/" target="_blank">here</a>
+</li><li>Copy everything to BASEPROJECTFOLDER/IKVM. </li></ul>
+<h3>License considerations</h3>
+<p>Keep in mind that different reasoners came with different licenses. E.g. HermiT is licensed by its owners under LGPL. Pellet is licensed by its owners under dual license - you may buy it from ClarkParsia or use it&nbsp;in an open-source projects under AGPL
+ license. Other OWLAPI compatible reasoners may have other licenses.</p>
+<p>The whole source (not the 3rd party libraries)&nbsp;of this project is&nbsp;is licensed under dual license: Apache 2.0 and GPLv3 - make your own choice that is most suited for your project.</p>
+<p>&nbsp;</p>
+<h4>Bash for windows:</h4>
+<p>The simplest way to have bash in windows is by downloading<a href="http://git-scm.com/download/win" target="_blank"> Git for window</a>&nbsp;otherwise you can find it&nbsp;<a href="http://www.gnu.org/software/bash/bash.html" target="_blank">here</a></p>
+</div><div class="ClearBoth"></div>
